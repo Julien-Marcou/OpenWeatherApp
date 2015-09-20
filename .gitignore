@@ -1,0 +1,6 @@
+## Ignore Compass temporary files
+/www/.tmp
+
+## Ingore Apache Cordova auto-generated files
+/platforms
+/plugins

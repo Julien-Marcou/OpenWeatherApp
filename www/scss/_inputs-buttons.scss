@@ -1,0 +1,149 @@
+
+/* OPTIONS */
+
+$backgroundColor: #2b2b2b;
+$borderDefault: 1px solid #3c3c3c;
+$borderFocus: 1px solid #4a4a4a;
+
+
+/* INPUTS */
+
+input {
+	padding: 3px 6px;
+	color: #bbb;
+	background-color: $backgroundColor;
+	border: $borderDefault;
+	border-radius: 3px;
+	outline: 0 none;
+}
+input:focus {
+	border: $borderFocus;
+}
+input:disabled {
+	cursor: not-allowed !important;
+	opacity: 0.35;
+	color: #777;
+}
+
+
+/* BUTTONS */
+
+button, .button-like {
+	padding: 9px 14px;
+	margin-bottom: 8px;
+	font-size: 1.1em;
+	background: #262626;
+	border: 0 none;
+	box-shadow: 0 3px 0 #202020;
+	border-radius: 3px;
+	outline: 0 none;
+	transition: all 0.1s, width none, padding none;
+}
+button:active {
+	margin-top: 2px;
+	margin-bottom: 6px;
+	box-shadow: 0 1px 0 #1a1a1a;
+}
+.button-left, .button-right {
+	width: calc(50% - 4px);
+}
+.button-left {
+	float: left;
+}
+.button-right {
+	float: right;
+}
+.button-stretch {
+	//padding: 11px 14px;
+	width: 100%;
+	transition: width 0.4s ease, padding 0.4s ease;
+}
+
+
+/* CHECKBOXES */
+
+[type="checkbox"] {
+	opacity: 0 !important;
+	position: absolute !important;
+	left: -9999px !important;
+}
+[type="checkbox"] + .icon {
+	display: inline-block;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	font-size: 19px;
+	color: #2f6e44;
+	border: $borderDefault;
+	background-color: $backgroundColor;
+	border-radius: 3px;
+	text-align: center;
+	vertical-align: baseline;
+}
+[type="checkbox"] + .icon:before {
+	content: '\e805';
+	opacity: 0;
+	width: 20px;
+	height: 16px;
+	line-height: 17px;
+	display: inline-block;
+	vertical-align: bottom;
+	transition: all 0.17s;
+}
+[type="checkbox"]:checked + .icon:before {
+	opacity: 1;
+}
+[type="checkbox"]:disabled + .icon {
+	cursor: not-allowed;
+	opacity: 0.35;
+	color: #666;
+}
+[type="checkbox"]:focus + .icon {
+	border: $borderFocus;
+}
+
+
+/* RADIOS */
+
+[type="radio"] {
+	opacity: 0 !important;
+	position: absolute !important;
+	left: -9999px !important;
+}
+[type="radio"] + .icon {
+	display: inline-block;
+	cursor: pointer;
+	width: 22px;
+	height: 22px;
+	border: $borderDefault;
+	background-color: $backgroundColor;
+	border-radius: 12px;
+	text-align: center;
+	vertical-align: baseline;
+}
+[type="radio"] + .icon:before {
+	content: ' ';
+	opacity: 0;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+	background: #2f6e44;
+	border-radius: 10px;
+	display: inline-block;
+	vertical-align: bottom;
+	transition: all 0.17s;
+}
+[type="radio"]:checked + .icon:before {
+	opacity: 1;
+}
+[type="radio"]:disabled + .icon:before {
+	background: #666;
+}
+[type="radio"]:disabled + .icon {
+	cursor: not-allowed;
+	opacity: 0.35;
+}
+[type="radio"]:focus + .icon {
+	border: $borderFocus;
+}
+

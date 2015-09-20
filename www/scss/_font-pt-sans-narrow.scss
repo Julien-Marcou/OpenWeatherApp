@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'PT Sans Narrow';
+	font-weight: 400;
+	font-style: normal;
+	src: url('font/PT-Sans-Narrow/PT-Sans-Narrow.eot');
+	src: url('font/PT-Sans-Narrow.eot?#iefix')        format('embedded-opentype'),
+	     local('PT-Sans-Narrow'),
+	     local('PT-Sans-Narrow-regular'),
+	     url('font/PT-Sans-Narrow/PT-Sans-Narrow.woff2')             format('woff2'),
+	     url('font/PT-Sans-Narrow/PT-Sans-Narrow.woff')              format('woff'),
+	     url('font/PT-Sans-Narrow/PT-Sans-Narrow.ttf')               format('truetype'),
+	     url('font/PT-Sans-Narrow/PT-Sans-Narrow.svg?#PTSansNarrow') format('svg');
+}

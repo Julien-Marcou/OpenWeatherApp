@@ -1,0 +1,31 @@
+
+.weather-icon {
+	display: block;
+	width: 80px;
+	height: 80px;
+	background-image: url(img/weather.svg);
+	background-position: -240px -240px;
+	background-size: 400px 320px;
+}
+
+.weather-clouds-moon {  background-position: 0      0; }
+.weather-clouds-sun {   background-position: -80px  0; }
+.weather-clouds {       background-position: -160px 0; }
+.weather-clouds-heavy { background-position: -240px 0; }
+.weather-wind {         background-position: -320px 0; }
+
+.weather-rain-moon {    background-position: 0      -80px; }
+.weather-rain-sun {     background-position: -80px  -80px; }
+.weather-rain {         background-position: -160px -80px; }
+.weather-rain-thunder { background-position: -240px -80px; }
+.weather-fog {          background-position: -320px -80px; }
+
+.weather-snow-moon {    background-position: 0      -160px; }
+.weather-snow-sun {     background-position: -80px  -160px; }
+.weather-snow {         background-position: -160px -160px; }
+.weather-snow-rain {    background-position: -240px -160px; }
+.weather-hail {         background-position: -320px -160px; }
+
+.weather-moon {         background-position: 0      -240px; }
+.weather-sun {          background-position: -80px  -240px; }
+.weather-unknown {      background-position: -160px -240px; }
