@@ -18,6 +18,7 @@
 	var weatherPreviewContent = $('#weatherPreviewContent').html();
 	var weatherForecastWrapper = $('#weatherForecastWrapper').html();
 	var weatherForecastTitle = $('#weatherForecastTitle').html();
+	var weatherForecastError = $('#weatherForecastError').html();
 	var weatherForecastContent = $('#weatherForecastContent').html();
 
 	// "New weather place" page
@@ -216,12 +217,16 @@
 			}
 			else {
 				$previewWrapper.removeClass('loading').addClass('error').text('Location not found');
-				$forecastWrapper.removeClass('loading').addClass('error').text('Location not found');
+				$forecastWrapper.removeClass('loading').addClass('error').html(weatherForecastError
+					.replace('%error', 'Location not found')
+				);
 			}
 		})
 		.fail(function() {
 			$previewWrapper.removeClass('loading').addClass('error').text('Network error');
-			$forecastWrapper.removeClass('loading').addClass('error').text('Network error');
+			$forecastWrapper.removeClass('loading').addClass('error').html(weatherForecastError
+				.replace('%error', 'Network error')
+			);
 		});
 	}
 
@@ -237,12 +242,16 @@
 					})
 					.fail(function() {
 						$previewWrapper.removeClass('loading').addClass('error').text('Network error');
-						$forecastWrapper.removeClass('loading').addClass('error').text('Network error');
+						$forecastWrapper.removeClass('loading').addClass('error').html(weatherForecastError
+							.replace('%error', 'Network error')
+						);
 					});
 				},
 				function(error) {
 					$previewWrapper.removeClass('loading').addClass('error').text(error.message);
-					$forecastWrapper.removeClass('loading').addClass('error').text(error.message);
+					$forecastWrapper.removeClass('loading').addClass('error').html(weatherForecastError
+						.replace('%error', error.message)
+					);
 				},
 				{
 					timeout: 10000
@@ -251,7 +260,9 @@
 		}
 		else {
 			$previewWrapper.removeClass('loading').addClass('error').text('Geolocation unavailable');
-			$forecastWrapper.removeClass('loading').addClass('error').text('Geolocation unavailable');
+			$forecastWrapper.removeClass('loading').addClass('error').html(weatherForecastError
+				.replace('%error', 'Geolocation unavailable')
+			);
 		}
 	}
 
@@ -300,6 +311,7 @@
 
 		$weatherForecasts.find('.forecast').filter(function() {
 			if($(this).data('place-id') == id) {
+				$(this).data('place-id', -1);
 				$(this).children().addClass('hidden');
 			}
 			else if($(this).data('place-id') > id) {
