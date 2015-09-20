@@ -6,6 +6,8 @@ A sample Open Source Weather application.
 How to build
 -----------
 
+**Apache Cordova** + **Compass** need to be installed on your computer in order to continue.
+
 This repository is an Apache Cordova project, missing folders and dependencies will be automatically downloaded and installed when you add a destination platform.
 
 To compile the SCSS to CSS, execute this line from the `www` folder
