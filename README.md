@@ -24,8 +24,8 @@ cordova build android
 Screenshots
 -----------
 
-![OpenWeatherApp New Weather Place Page](https://raw.githubusercontent.com/Julien-Marcou/OpenWeatherApp/master/Screnshots/NewWeatherPlace.jpg)
+![OpenWeatherApp New Weather Place Page](https://raw.githubusercontent.com/Julien-Marcou/OpenWeatherApp/master/screenshots/NewWeatherPlace.jpg)
 
-![OpenWeatherApp Weather Previews Page](https://raw.githubusercontent.com/Julien-Marcou/OpenWeatherApp/master/Screnshots/WeatherPreviews.jpg)
+![OpenWeatherApp Weather Previews Page](https://raw.githubusercontent.com/Julien-Marcou/OpenWeatherApp/master/screenshots/WeatherPreviews.jpg)
 
-![OpenWeatherApp Weather Forecast Page](https://raw.githubusercontent.com/Julien-Marcou/OpenWeatherApp/master/Screnshots/WeatherForecast.jpg)
+![OpenWeatherApp Weather Forecast Page](https://raw.githubusercontent.com/Julien-Marcou/OpenWeatherApp/master/screenshots/WeatherForecast.jpg)
