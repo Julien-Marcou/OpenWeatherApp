@@ -3,6 +3,12 @@ OpenWeatherApp
 
 A sample Open Source Weather application.
 
+Set-up
+-----------
+
+The app uses the [OpenWeatherMap](http://openweathermap.org/) API.  
+You'll need to add your own API Key into the file `www/js/app.js` in order to make it works.
+
 How to build
 -----------
 
