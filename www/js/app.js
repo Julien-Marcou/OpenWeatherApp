@@ -2,6 +2,8 @@
 
 (function($) {
 
+	var API_KEY = 'YOUR_OPENWEATHERMAP_APPID';
+
 	// Data
 	var weatherPlaces = [];
 	var weatherData = [];
@@ -149,8 +151,8 @@
 		var place = weatherPlaces[id];
 
 		$.when(
-			$.get('http://api.openweathermap.org/data/2.5/weather?'+location+'&mode=json&units=metric'),
-			$.get('http://api.openweathermap.org/data/2.5/forecast/daily?'+location+'&mode=json&units=metric&cnt=8')
+			$.get('http://api.openweathermap.org/data/2.5/weather?'+location+'&mode=json&units=metric&APPID='+API_KEY),
+			$.get('http://api.openweathermap.org/data/2.5/forecast/daily?'+location+'&mode=json&units=metric&cnt=8&APPID='+API_KEY)
 		)
 		.done(function(accurateData, approximateData) {
 			var data = {
@@ -235,7 +237,7 @@
 			navigator.geolocation.getCurrentPosition(
 				function(position) {
 					$.get(
-						'http://api.openweathermap.org/data/2.5/find?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&mode=json&units=metric&cnt=1'
+						'http://api.openweathermap.org/data/2.5/find?lat='+position.coords.latitude+'&lon='+position.coords.longitude+'&mode=json&units=metric&cnt=1&APPID='+API_KEY
 					)
 					.done(function(currentData) {
 						callback(currentData.list[0].id);
